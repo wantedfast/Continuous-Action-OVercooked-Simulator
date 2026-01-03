@@ -62,12 +62,6 @@ You can monitor:
 
 ---
 
-## 📌 Notes
-
-* Unity Editor version: *\[your version here]*
-* ML-Agents release: *\[your version here]*
-* Training algorithm: PPO (with potential extension to MAPPO for multi-agent setups)
-
 ---
 
 ## 📜 Usage Recap
