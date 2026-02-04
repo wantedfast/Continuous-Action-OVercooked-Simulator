@@ -1,11 +1,11 @@
 
 # 🍲 Continuous OVercooked Simulator in Multi Agent Reinforcemnet Learning
 
-This project implements a **multi-agent reinforcement learning** environment inspired by *Overcooked*.  
+This project implements a **multi-agent reinforcement learning** environment inspired by *Overcooked AI*.  
 Two agents must cooperate implicitly (without pre-defined roles, they will chose their role by their own decesion based on environment feedback) to complete cooking tasks such as:
-- Picking up onions and dishes  
-- Cooking in a pot  
-- Delivering finished soup to a counter  
+- Picking up 3 onions and one dish  
+- Cooking onions as a soup in a pot  
+- Delivering finished soup  with dish to a counter  
 
 
 ## 📦 Environment Setup
@@ -15,7 +15,7 @@ This project uses **Unity ML-Agents** package with **conda** envionment package 
 
 ### 1. Create and activate a conda environment (About the python version, you can take reference from Unity Ml-Agents guideline. It's better to set up the environment step by step followed by Unity Ml-Agnets guide)
 
-import COVS.unitypackage to your unity 3D project.
+import **ContinousOVercookedSimulator.unitypackage** to your unity 3D project.
 
 And then create you own environment by conda.
 ```bash
@@ -32,7 +32,7 @@ Run training with your configuration file (`run.yaml`):
 mlagents-learn run.yaml --run-id=<your_run_id> --force
 ```
 
-* `run.yaml` → defines PPO/MAPPO training parameters
+* `run.yaml` → defines PPO/MAPOCA training parameters
 * `--run-id` → unique identifier for each experiment
 * `--force` → overwrite previous runs with the same ID
 
@@ -49,8 +49,7 @@ tensorboard --logdir results/<your_run_id>
 You can monitor:
 
 * **Cumulative Reward** → overall performance of agents
-* **Episode Length** → efficiency of task completion
-* **Policy & Value Losses** → training stability
+* **Completion Time** → efficiency of task completion
 
 ---
 
